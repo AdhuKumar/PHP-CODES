@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<titlte></titlte>
+<head>
+<body>
+<?php
+setcookie($cookie_name,$cookie_value,time()+(8200 * 30),"/");
+if(!isset($_cookie[$cookie_name]))
+{
+    echo "cookie named".$cookie_name."is not set!";
+}
+else{
+    echo "cookie".$cookie_name."'is set!<br>";
+    echo "value is:".$_COOKIE[$cookie_name];
+}
+?>
+<p><strong>NOTE:</strong>YOU MIGHT HAVE TO RELOAD THE PAGE TO SEE THE VALUES OF THE COOKIE.</p>
+</body>
+</html>
+<head>
+<title> cookies </title>
+</head>
+<body>
+<?php
+$cookie_name = "user";
+$cookie_value = "admin";
+setcookie($cookie_name,$cookie_value,time()+(8200 * 30),"/");
+if(!isset($_COOKIE[$cookie_name]))
+{   
+    echo "cookie named".$cookie_name."is not set!"; 
+    }   
+    else{
+        echo "cookie".$cookie_name."'is set!<br>";
+        echo "value is:".$_COOKIE[$cookie_name];    
+        }
+        ?>
+        <P><strong>NOTE<strong>you MIGHT head to RELOAD THE PAGE
